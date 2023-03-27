@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>707225886637-eemvfa093fgp4oi37kkbcgh7onsbofgc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.707225886637-eemvfa093fgp4oi37kkbcgh7onsbofgc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8SxOm0xIVpwBjx5z5E_kB5MScvopnQng</string>
+	<key>GCM_SENDER_ID</key>
+	<string>707225886637</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ritamarrano.Concurrency</string>
+	<key>PROJECT_ID</key>
+	<string>fir-storage-84767</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fir-storage-84767.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:707225886637:ios:720ae1efbb36bf89100b24</string>
+</dict>
+</plist>
