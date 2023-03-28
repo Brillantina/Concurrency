@@ -8,23 +8,28 @@
 import Foundation
 import UIKit
 import FirebaseStorage
+import Firebase
+import FirebaseDatabase
+import Firebase
 
+class ViewController: UIViewController, ObservableObject {
 
+    
 
-class ViewController: UIViewController {
-
+    
     // Reference to Firebase Storage
     let storage = Storage.storage()
 
     // Array to store downloaded images
-    var images = [UIImage]()
+    @Published var images = [UIImage]()
 
     // Create a scroll view to display images
     let scrollView = UIScrollView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("image")
+        
         // Set up the scroll view
         scrollView.frame = view.bounds
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -32,10 +37,9 @@ class ViewController: UIViewController {
         scrollView.isDirectionalLockEnabled = true
         scrollView.alwaysBounceVertical = true
         view.addSubview(scrollView)
-
+        print("image")
         // Fetch images from Firebase Storage folder
-        let reference = storage.reference(withPath: "images/")
-        reference.listAll { [weak self] (result, error) in
+        let _: () = storage.reference(withPath: "images/").listAll { [weak self] (result, error) in
             guard let self = self else { return }
             if let error = error {
                 print("Error fetching images: \(error.localizedDescription)")
@@ -49,6 +53,7 @@ class ViewController: UIViewController {
                         if let image = UIImage(data: data) {
                             // Append downloaded image to array
                             self.images.append(image)
+                            print("image")
                             // Update UI on the main thread
                             DispatchQueue.main.async {
                                 self.updateScrollView()
@@ -58,6 +63,8 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+
     }
 
     // Helper method to update the scroll view with downloaded images

@@ -13,11 +13,12 @@
 		C99AC9FB29D1873200A2F56C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99AC9FA29D1873200A2F56C /* Preview Assets.xcassets */; };
 		C99AC9FD29D1873200A2F56C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99AC9FC29D1873200A2F56C /* Persistence.swift */; };
 		C99ACA0029D1873200A2F56C /* Concurrency.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C99AC9FE29D1873200A2F56C /* Concurrency.xcdatamodeld */; };
-		C99ACA0729D1897100A2F56C /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = C99ACA0629D1897100A2F56C /* GoogleService-Info-2.plist */; };
+		C99ACA0729D1897100A2F56C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C99ACA0629D1897100A2F56C /* GoogleService-Info.plist */; };
 		C99ACA0A29D192BB00A2F56C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C99ACA0929D192BB00A2F56C /* FirebaseDatabase */; };
 		C99ACA0C29D192BB00A2F56C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C99ACA0B29D192BB00A2F56C /* FirebaseFirestore */; };
 		C99ACA0E29D192BB00A2F56C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C99ACA0D29D192BB00A2F56C /* FirebaseStorage */; };
 		C99ACA1029D1951B00A2F56C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99ACA0F29D1951B00A2F56C /* ViewController.swift */; };
+		C99ACA1229D1E42000A2F56C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99ACA1129D1E42000A2F56C /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +29,9 @@
 		C99AC9FA29D1873200A2F56C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C99AC9FC29D1873200A2F56C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		C99AC9FF29D1873200A2F56C /* Concurrency.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Concurrency.xcdatamodel; sourceTree = "<group>"; };
-		C99ACA0629D1897100A2F56C /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		C99ACA0629D1897100A2F56C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Concurrency/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C99ACA0F29D1951B00A2F56C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C99ACA1129D1E42000A2F56C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +70,11 @@
 				C99AC9F329D1873200A2F56C /* ConcurrencyApp.swift */,
 				C99AC9F529D1873200A2F56C /* ContentView.swift */,
 				C99ACA0F29D1951B00A2F56C /* ViewController.swift */,
+				C99ACA1129D1E42000A2F56C /* Image.swift */,
 				C99AC9F729D1873200A2F56C /* Assets.xcassets */,
 				C99AC9FC29D1873200A2F56C /* Persistence.swift */,
 				C99AC9FE29D1873200A2F56C /* Concurrency.xcdatamodeld */,
-				C99ACA0629D1897100A2F56C /* GoogleService-Info-2.plist */,
+				C99ACA0629D1897100A2F56C /* GoogleService-Info.plist */,
 				C99AC9F929D1873200A2F56C /* Preview Content */,
 			);
 			path = Concurrency;
@@ -153,7 +156,7 @@
 			files = (
 				C99AC9FB29D1873200A2F56C /* Preview Assets.xcassets in Resources */,
 				C99AC9F829D1873200A2F56C /* Assets.xcassets in Resources */,
-				C99ACA0729D1897100A2F56C /* GoogleService-Info-2.plist in Resources */,
+				C99ACA0729D1897100A2F56C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99ACA1029D1951B00A2F56C /* ViewController.swift in Sources */,
+				C99ACA1229D1E42000A2F56C /* Image.swift in Sources */,
 				C99AC9FD29D1873200A2F56C /* Persistence.swift in Sources */,
 				C99AC9F629D1873200A2F56C /* ContentView.swift in Sources */,
 				C99AC9F429D1873200A2F56C /* ConcurrencyApp.swift in Sources */,
