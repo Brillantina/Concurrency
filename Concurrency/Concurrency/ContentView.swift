@@ -46,6 +46,9 @@ class FirebaseImageLoader: ObservableObject {
                         print("Error downloading image: \(error?.localizedDescription ?? "")")
                         return
                     }
+                    // Il download dei dati dell'immagine viene eseguito in background e, una volta completato, la variabile imageData viene aggiornata sulla thread principale.
+                    
+
                     DispatchQueue.main.async {
                         print("ciao non fun")
                         self.imageData = data
