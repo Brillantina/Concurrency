@@ -17,9 +17,10 @@
 ## Status
 * [x] Firebase connection
 * [x] Data fetching
-* [ ] Data upload
+* [x] Data upload
 * [ ] UI 
 * [ ] CoreData
+* [ ] Cache
 
 
 
