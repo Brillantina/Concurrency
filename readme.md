@@ -18,8 +18,8 @@
 * [x] Firebase connection
 * [x] Data fetching
 * [x] Data upload
-* [ ] UI 
-* [ ] CoreData
+* [x] UI 
+* [x] CoreData
 * [ ] Cache
 
 
