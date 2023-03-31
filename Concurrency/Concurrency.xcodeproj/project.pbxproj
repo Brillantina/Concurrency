@@ -19,6 +19,7 @@
 		C99ACA0E29D192BB00A2F56C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C99ACA0D29D192BB00A2F56C /* FirebaseStorage */; };
 		C99ACA1029D1951B00A2F56C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99ACA0F29D1951B00A2F56C /* ViewController.swift */; };
 		C99ACA1229D1E42000A2F56C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99ACA1129D1E42000A2F56C /* Image.swift */; };
+		C99D8B5E29D6CCC4007F90C0 /* prova.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99D8B5D29D6CCC4007F90C0 /* prova.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C99ACA0629D1897100A2F56C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Concurrency/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C99ACA0F29D1951B00A2F56C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C99ACA1129D1E42000A2F56C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		C99D8B5D29D6CCC4007F90C0 /* prova.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prova.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				C99AC9F329D1873200A2F56C /* ConcurrencyApp.swift */,
 				C99AC9F529D1873200A2F56C /* ContentView.swift */,
+				C99D8B5D29D6CCC4007F90C0 /* prova.swift */,
 				C99ACA0F29D1951B00A2F56C /* ViewController.swift */,
 				C99ACA1129D1E42000A2F56C /* Image.swift */,
 				C99AC9F729D1873200A2F56C /* Assets.xcassets */,
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99ACA1029D1951B00A2F56C /* ViewController.swift in Sources */,
+				C99D8B5E29D6CCC4007F90C0 /* prova.swift in Sources */,
 				C99ACA1229D1E42000A2F56C /* Image.swift in Sources */,
 				C99AC9FD29D1873200A2F56C /* Persistence.swift in Sources */,
 				C99AC9F629D1873200A2F56C /* ContentView.swift in Sources */,
