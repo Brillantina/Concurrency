@@ -19,7 +19,7 @@ class FirebaseImageLoader: ObservableObject {
     
     
     
-    
+    private var context = CoreManager.shared.persistentContainer.viewContext
     @Published var imageData = Data()
     private var downloadTask: StorageDownloadTask?
 
@@ -40,7 +40,12 @@ class FirebaseImageLoader: ObservableObject {
                     }
 
                     // save the image data to Core Data
-//                    self.coreManager.addImage(data: data, url: url.absoluteString, createdAt: Date())
+                    let image = Photo(context: self.context)
+                    image.content = UIImage(data: data)
+                    
+                    try? self.context.save()
+                    
+                    
                     
                     DispatchQueue.main.async {
                         print("ciao non fun")
