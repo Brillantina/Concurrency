@@ -11,6 +11,7 @@ import FirebaseStorage
 struct UploadView: View {
     @State private var selectedImage: UIImage?
     @State private var isImagePickerPresented = false
+    var data = FirebaseImageLoader(path: "images/")
     
     var body: some View {
         VStack {
@@ -32,7 +33,7 @@ struct UploadView: View {
             }
             Button("Upload Image") {
                 guard let image = selectedImage else { return }
-                uploadImageToFirebaseStorage(image: image) { (imageUrl, error) in
+                data.uploadImageToFirebaseStorage(image: image) { (imageUrl, error) in
                     if let error = error {
                         print("Error uploading image: \(error.localizedDescription)")
                     } else {
@@ -44,33 +45,33 @@ struct UploadView: View {
         }
     }
 
-    func uploadImageToFirebaseStorage(image: UIImage, completion: @escaping (String?, Error?) -> ()) {
-        let storageRef = Storage.storage().reference().child("images/")
-        let imageName = "\(UUID().uuidString).jpg"
-        let imageRef = storageRef.child(imageName)
-
-        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
-            completion(nil, NSError(domain: "Invalid image data", code: 0, userInfo: nil))
-            return
-        }
-
-        let metadata = StorageMetadata()
-        metadata.contentType = "image/jpeg"
-
-        imageRef.putData(imageData, metadata: metadata) { (metadata, error) in
-            if let error = error {
-                completion(nil, error)
-            } else {
-                imageRef.downloadURL { (url, error) in
-                    guard let url = url else {
-                        completion(nil, error)
-                        return
-                    }
-                    completion(url.absoluteString, nil)
-                }
-            }
-        }
-    }
+//    func uploadImageToFirebaseStorage(image: UIImage, completion: @escaping (String?, Error?) -> ()) {
+//        let storageRef = Storage.storage().reference().child("images/")
+//        let imageName = "\(UUID().uuidString).jpg"
+//        let imageRef = storageRef.child(imageName)
+//
+//        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
+//            completion(nil, NSError(domain: "Invalid image data", code: 0, userInfo: nil))
+//            return
+//        }
+//
+//        let metadata = StorageMetadata()
+//        metadata.contentType = "image/jpeg"
+//
+//        imageRef.putData(imageData, metadata: metadata) { (metadata, error) in
+//            if let error = error {
+//                completion(nil, error)
+//            } else {
+//                imageRef.downloadURL { (url, error) in
+//                    guard let url = url else {
+//                        completion(nil, error)
+//                        return
+//                    }
+//                    completion(url.absoluteString, nil)
+//                }
+//            }
+//        }
+//    }
 }
 
 struct ImagePicker: UIViewControllerRepresentable {

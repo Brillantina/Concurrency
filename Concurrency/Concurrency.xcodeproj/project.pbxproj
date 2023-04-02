@@ -35,6 +35,8 @@
 		C9123E8D29D5F83E00443153 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C9123E8C29D5F83E00443153 /* FirebaseStorage */; };
 		C9123E8F29D5F83E00443153 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C9123E8E29D5F83E00443153 /* FirebaseStorageCombine-Community */; };
 		C9123E9229D6A90C00443153 /* ImageContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9123E9029D6A90C00443153 /* ImageContainer.xcdatamodeld */; };
+		C949645A29D99E09007FB7B2 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949645929D99E09007FB7B2 /* CoreManager.swift */; };
+		C959775829D84E7500CA1495 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C959775729D84E7500CA1495 /* DataManager.swift */; };
 		C99AC9F429D1873200A2F56C /* ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99AC9F329D1873200A2F56C /* ConcurrencyApp.swift */; };
 		C99AC9F629D1873200A2F56C /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99AC9F529D1873200A2F56C /* DownloadView.swift */; };
 		C99AC9F829D1873200A2F56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99AC9F729D1873200A2F56C /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		C9123E9129D6A90C00443153 /* ImageContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageContainer.xcdatamodel; sourceTree = "<group>"; };
+		C949645929D99E09007FB7B2 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
+		C959775729D84E7500CA1495 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C99AC9F029D1873200A2F56C /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99AC9F329D1873200A2F56C /* ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyApp.swift; sourceTree = "<group>"; };
 		C99AC9F529D1873200A2F56C /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				C99AC9F329D1873200A2F56C /* ConcurrencyApp.swift */,
 				C9BB9ADC29D5E242005D9D8F /* ContentView.swift */,
+				C959775729D84E7500CA1495 /* DataManager.swift */,
+				C949645929D99E09007FB7B2 /* CoreManager.swift */,
 				C99AC9F529D1873200A2F56C /* DownloadView.swift */,
 				C9BB9AD829D5E118005D9D8F /* UploadView.swift */,
 				C9BB9ADA29D5E134005D9D8F /* LoginRegister.swift */,
@@ -251,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C949645A29D99E09007FB7B2 /* CoreManager.swift in Sources */,
 				C99ACA1029D1951B00A2F56C /* ViewController.swift in Sources */,
 				C99ACA1229D1E42000A2F56C /* Image.swift in Sources */,
 				C99AC9FD29D1873200A2F56C /* Persistence.swift in Sources */,
@@ -259,6 +266,7 @@
 				C9BB9ADB29D5E134005D9D8F /* LoginRegister.swift in Sources */,
 				C9BB9ADD29D5E242005D9D8F /* ContentView.swift in Sources */,
 				C9BB9AD929D5E118005D9D8F /* UploadView.swift in Sources */,
+				C959775829D84E7500CA1495 /* DataManager.swift in Sources */,
 				C99AC9F429D1873200A2F56C /* ConcurrencyApp.swift in Sources */,
 				C99ACA0029D1873200A2F56C /* Concurrency.xcdatamodeld in Sources */,
 			);

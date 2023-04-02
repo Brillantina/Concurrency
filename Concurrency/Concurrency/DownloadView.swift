@@ -14,7 +14,6 @@ import Combine
 
 
 struct FirebaseImage: View {
-    
     @ObservedObject var imageLoader: FirebaseImageLoader
     
     init(path: String) {
@@ -30,49 +29,7 @@ struct FirebaseImage: View {
     }
 }
 
-class FirebaseImageLoader: ObservableObject {
-    @Published var imageData = Data()
-    private var downloadTask: StorageDownloadTask?
-    
-    init(path: String) {
-        let storageRef = Storage.storage().reference(withPath: path)
-        let _: () = storageRef.downloadURL { (url, error) in
-            if let error = error{
-                // gestisci l'errore
-                print("Errore durante il download dell'immagine: \(error.localizedDescription)")
-            }
-            else if let url = url {
-                URLSession.shared.dataTask(with: url) { (data, response, error) in
-                    guard let data = data else {
-                        print("Error downloading image: \(error?.localizedDescription ?? "")")
-                        return
-                    }
-                    // Il download dei dati dell'immagine viene eseguito in background e, una volta completato, la variabile imageData viene aggiornata sulla thread principale.
-                    
-                    // save the image data to Core Data
-                    let imageEntity = ImageEntity(context: context)
-                    imageEntity.data = data
-                    imageEntity.url = url.absoluteString
-                    imageEntity.createdAt = Date()
-                    
-                    do {
-                        try context.save()
-                    } catch {
-                        print("Error saving image to Core Data: \(error.localizedDescription)")
-                    }
-                    
-                    DispatchQueue.main.async {
-                        print("ciao non fun")
-                        self.imageData = data
-                    }
-                }
-                .resume()
-            } else {
-                print("Error getting download URL: \(error?.localizedDescription ?? "")")
-            }
-        }
-    }
-}
+
 
 struct DownloadView: View {
     let storage = Storage.storage()
